@@ -30,16 +30,13 @@ const Historia = memo(() => (
                   {item.title}
                 </h3>
                 {idx === HISTORY_ITEMS.length - 1 && (
-                  <span className="px-2 py-1 bg-latam-orange text-white text-xs rounded-full animate-pulse">
+                  <span className="px-2 py-1 bg-latam-orange text-white text-xs rounded-full">
                     Actual
                   </span>
                 )}
               </div>
               <p className="text-latam-gray-700 leading-relaxed">{item.desc}</p>
             </div>
-
-            {/* Punto de conexión animado */}
-            <div className="absolute left-7 top-8 w-2 h-2 bg-latam-orange rounded-full animate-pulse" />
           </div>
         ))}
       </div>
