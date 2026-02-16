@@ -4,15 +4,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**dossier_latam** is an interactive dossier project designed to be provided to potential clients. The project is currently in its initial setup phase.
+**dossier_latam** is an interactive digital dossier project designed to be provided to potential clients. The project showcases information in an engaging and modern interface.
 
 ## Project Language
 
 This project is primarily in Spanish (LATAM). Commit messages, documentation, and code comments should be in Spanish unless otherwise specified.
 
+## Tech Stack
+
+- **Framework**: Next.js 16.1.6
+- **React**: 19.0.0
+- **TypeScript**: 5.x
+- **Styling**: Tailwind CSS 3.4.17
+- **Icons**: Lucide React 0.563.0
+- **Deployment**: Vercel
+
 ## Development Commands
 
-> **Note**: This project is in early stages. Development commands will be added as the tech stack and build system are established.
+```bash
+# Desarrollo local
+npm run dev
+
+# Compilar para producción
+npm run build
+
+# Iniciar servidor de producción
+npm start
+
+# Ejecutar linter
+npm run lint
+```
 
 ## MCP Configuration
 
@@ -38,4 +59,36 @@ https://mcp.vercel.com/<teamSlug>/<projectSlug>
 
 ## Architecture
 
-> **Note**: Architecture details will be documented as the project structure is developed.
+### Project Structure
+
+```
+dossier_latam/
+├── app/                      # Next.js App Router
+│   ├── components/          # Componentes de React
+│   │   └── LatamDigitalDossier.tsx  # Componente principal del dossier
+│   ├── globals.css          # Estilos globales con Tailwind
+│   ├── layout.tsx           # Layout raíz de la aplicación
+│   └── page.tsx             # Página principal
+├── public/                  # Archivos estáticos
+├── next.config.ts           # Configuración de Next.js
+├── tailwind.config.ts       # Configuración de Tailwind CSS
+├── tsconfig.json            # Configuración de TypeScript
+├── vercel.json              # Configuración de Vercel
+└── package.json             # Dependencias y scripts
+```
+
+### Key Features
+
+- **App Router**: Utiliza el nuevo sistema de enrutamiento de Next.js 16
+- **TypeScript**: Configuración estricta con tipos seguros
+- **Tailwind CSS**: Sistema de diseño utility-first
+- **Component-based**: Arquitectura modular con componentes reutilizables
+- **Optimized for Vercel**: Configuración lista para despliegue en Vercel
+
+### Deployment
+
+El proyecto está configurado para desplegarse automáticamente en Vercel:
+- Build command: `npm run build`
+- Dev command: `npm run dev`
+- Install command: `npm install`
+- Framework: Next.js
