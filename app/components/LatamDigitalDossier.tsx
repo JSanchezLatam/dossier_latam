@@ -23,10 +23,11 @@ const LatamDigitalDossier = () => {
 
   const handleSectionChange = useCallback((section: SectionType) => {
     setActiveSection(section);
-    // Scroll to top of content area smoothly
-    if (contentRef.current) {
-      contentRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    // Scroll to top with offset to account for sticky navbar
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }, []);
 
   const renderContent = useCallback(() => {
